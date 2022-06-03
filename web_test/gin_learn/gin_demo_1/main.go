@@ -14,11 +14,23 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	_, _ = fmt.Fprintln(w, string(web))
 }
 
-func main() {
-	http.HandleFunc("/hello", sayHello)
-	err := http.ListenAndServe(":9090", nil)
+func getStockInfo(url string) {
+	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Printf("http server failed, err :%v\n", err)
+		fmt.Println(err)
 		return
 	}
+	defer resp.Body.Close()
+	body, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(string(body))
+}
+
+func main() {
+	getStockInfo("http://suggest3.sinajs.cn/suggest/type=&key=60&name=suggestdata_1429775785401")
+	//http.HandleFunc("/hello", sayHello)
+	//err := http.ListenAndServe(":9090", nil)
+	//if err != nil {
+	//	fmt.Printf("http server failed, err :%v\n", err)
+	//	return
+	//}
 }
