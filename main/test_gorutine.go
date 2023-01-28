@@ -12,7 +12,7 @@ func showMsg(i int) {
 	println(i)
 }
 
-func main() {
+func main2() {
 	for i := 0; i < 10; i++ {
 		go showMsg(i)
 		wp.Add(1)
