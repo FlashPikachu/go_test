@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/gin-gonic/gin v1.7.7
+	github.com/redis/go-redis/v9 v9.0.3
 	gorm.io/driver/mysql v1.3.4
 	gorm.io/gorm v1.23.5
 )
@@ -24,7 +25,6 @@ require (
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/redis/go-redis/v9 v9.0.3 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	golang.org/x/crypto v0.0.0-20220518034528-6f7dac969898 // indirect
 	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect

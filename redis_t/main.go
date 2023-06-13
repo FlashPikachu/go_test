@@ -30,7 +30,7 @@ func main() {
 
 func init() {
 	rdb = redis.NewClient(&redis.Options{
-		Addr:     "47.110.240.147:6379",
+		Addr:     "47.110.240.147:63792",
 		Password: "valhalla", // 没有密码，默认值
 		DB:       0,          // 默认DB 0
 	})
